@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#country{
+    z-index: 1000;
+    position: absolute;
+    top: 20%;
+    
+    font-size: 16px;
+    font-size: 3.5vw;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes pop{
+    0%{
+        font-size: 16px;
+        font-size: 3.5vw;
+        color: white;
+    }
+
+    50%{
+        font-size: 16px;
+        font-size: 5vw;
+        color: #fff200;
+    }
+
+    100%{
+        font-size: 16px;
+        font-size: 3.5vw;
+        color: white;
+    }
+}
+
+#imageScreen{
+    z-index: -10;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    aspect-ratio: 1/0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+
+    filter: blur(3px);
+    
+    
+}
+
+#image{
+    animation: switchImageScreen 60s linear infinite;
+}
+
+@keyframes switchImageScreen{
+    0%{
+        background-image: url('https://jit-travel.com/wp-content/uploads/2020/04/Greece-2560x1194-2.jpg');
+    }
+
+    9%{
+        background-image: url('https://jit-travel.com/wp-content/uploads/2020/04/Greece-2560x1194-2.jpg');
+    }
+
+    12%{
+        background-image: url('https://wallpaperaccess.com/full/5603332.jpg');
+    }
+
+    19%{
+        background-image: url('https://wallpaperaccess.com/full/5603332.jpg');
+    }
+
+    100%{
+        background-image: url('https://jit-travel.com/wp-content/uploads/2020/04/Greece-2560x1194-2.jpg');
+    }
+}
+
+.line{
+    z-index: 10;
+    top: 70%;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    aspect-ratio: 1/0.003;
+}
+
+
+#generateButton{
+    z-index: 10;
+    margin-top: 30%;
+    text-decoration: none;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+    display: inline-block;
+    padding: 5%;
+    
+    font-size: 16px;
+    font-size: 2vw;
+    position: relative;
+
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#generateButton::after{
+    content: "";
+    
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    top: -500px;
+    left: -500px;
+    background-color: #ff3cac;
+    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+#generateButton:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200, 255, 0.5);
+}
+
+#generateButton:hover::after{
+    transform: rotate(150deg);
+}
+
+
+/* #title{
+    align-items: center;
+    margin-top: 4%;
+    color: rgb(224, 224, 224);
+    font-size: 16px;
+    font-size: 3vw;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.center2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    background: #27d86c;
+    padding: 3em;
+    align-items: center;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3em;
+} */
+
+/* .items{
+    background: #26caf8;
+    
+    /* display: flex;
+    justify-content: center; 
+} */
+
+/* .flag-image{
+    width: 2%;
+} */
